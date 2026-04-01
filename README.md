@@ -1,5 +1,7 @@
 # Claudinho
 
+![Claudinho](https://aventurasnahistoria.com.br/wp-content/uploads/musica/claudinho_morte_1.jpg)
+
 Use Claude Code with **any LLM** — not just Claude.
 
 Claudinho is a fork of the [Claude Code source leak](https://gitlawb.com/node/repos/z6MkgKkb/instructkr-claude-code) (exposed via npm source maps on March 31, 2026). We added an OpenAI-compatible provider shim so you can plug in GPT-4o, DeepSeek, Gemini, Llama, Mistral, or any model that speaks the OpenAI chat completions API. It now also supports the ChatGPT Codex backend for `codexplan` and `codexspark`.
