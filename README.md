@@ -1,8 +1,8 @@
-# OpenClaude
+# Claudinho
 
 Use Claude Code with **any LLM** — not just Claude.
 
-OpenClaude is a fork of the [Claude Code source leak](https://gitlawb.com/node/repos/z6MkgKkb/instructkr-claude-code) (exposed via npm source maps on March 31, 2026). We added an OpenAI-compatible provider shim so you can plug in GPT-4o, DeepSeek, Gemini, Llama, Mistral, or any model that speaks the OpenAI chat completions API. It now also supports the ChatGPT Codex backend for `codexplan` and `codexspark`.
+Claudinho is a fork of the [Claude Code source leak](https://gitlawb.com/node/repos/z6MkgKkb/instructkr-claude-code) (exposed via npm source maps on March 31, 2026). We added an OpenAI-compatible provider shim so you can plug in GPT-4o, DeepSeek, Gemini, Llama, Mistral, or any model that speaks the OpenAI chat completions API. It now also supports the ChatGPT Codex backend for `codexplan` and `codexspark`.
 
 All of Claude Code's tools work — bash, file read/write/edit, grep, glob, agents, tasks, MCP — just powered by whatever model you choose.
 
@@ -13,15 +13,15 @@ All of Claude Code's tools work — bash, file read/write/edit, grep, glob, agen
 ### Option A: npm (recommended)
 
 ```bash
-npm install -g @gitlawb/openclaude
+npm install -g claudinho
 ```
 
 ### Option B: From source (requires Bun)
 
 ```bash
 # Clone from gitlawb
-git clone https://node.gitlawb.com/z6MkqDnb7Siv3Cwj7pGJq4T5EsUisECqR8KpnDLwcaZq5TPr/openclaude.git
-cd openclaude
+git clone https://github.com/AugustoPinheiro/claudinho.git
+cd claudinho
 
 # Install dependencies
 bun install
@@ -36,8 +36,8 @@ npm link
 ### Option C: Run directly with Bun (no build step)
 
 ```bash
-git clone https://node.gitlawb.com/z6MkqDnb7Siv3Cwj7pGJq4T5EsUisECqR8KpnDLwcaZq5TPr/openclaude.git
-cd openclaude
+git clone https://github.com/AugustoPinheiro/claudinho.git
+cd claudinho
 bun install
 bun run dev
 ```
@@ -58,7 +58,7 @@ export OPENAI_MODEL=gpt-4o
 
 ```bash
 # If installed via npm
-openclaude
+claudinho
 
 # If built from source
 bun run dev
@@ -68,7 +68,7 @@ node dist/cli.mjs
 
 That's it. The tool system, streaming, file editing, multi-step reasoning — everything works through the model you picked.
 
-The npm package name is `@gitlawb/openclaude`, but the installed CLI command is still `openclaude`.
+The npm package name is `claudinho`, but the installed CLI command is still `claudinho`.
 
 ---
 
@@ -87,7 +87,7 @@ export OPENAI_MODEL=gpt-4o
 `codexplan` maps to GPT-5.4 on the Codex backend with high reasoning.
 `codexspark` maps to GPT-5.3 Codex Spark for faster loops.
 
-If you already use the Codex CLI, OpenClaude will read `~/.codex/auth.json`
+If you already use the Codex CLI, Claudinho will read `~/.codex/auth.json`
 automatically. You can also point it elsewhere with `CODEX_AUTH_JSON_PATH` or
 override the token directly with `CODEX_API_KEY`.
 
@@ -98,7 +98,7 @@ export OPENAI_MODEL=codexplan
 # optional if you do not already have ~/.codex/auth.json
 export CODEX_API_KEY=...
 
-openclaude
+claudinho
 ```
 
 ### DeepSeek
@@ -241,7 +241,7 @@ bun run profile:init -- --provider ollama --model llama3.1:8b
 # codex bootstrap with a fast model alias
 bun run profile:init -- --provider codex --model codexspark
 
-# launch using persisted profile (.openclaude-profile.json)
+# launch using persisted profile (.claudinho-profile.json)
 bun run dev:profile
 
 # codex profile (uses CODEX_API_KEY or ~/.codex/auth.json)
